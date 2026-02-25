@@ -35,6 +35,8 @@
         .sidebar {
             width: clamp(190px, 19vw, 255px);
             height: 100vh;
+            display: flex;
+            flex-direction: column;
             overflow-y: auto;
             padding: 16px 12px;
             border-right: 1px solid rgba(0, 0, 0, 0.12);
@@ -196,6 +198,19 @@
             max-width: none;
             line-height: 1.5;
         }
+
+        .sidebar-footer {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .attribution {
+            margin-top: 10px;
+            font-size: 0.72rem;
+            opacity: 0.75;
+            line-height: 1.35;
+            text-align: left;
+        }
         
         .value-display {
             font-size: 0.8rem;
@@ -249,9 +264,14 @@
                 </div>
             </div>
 
-            <p class="instructions">
-                Use `Move` to drag image or inversion circle. Use `Line` or `Circle` to draw overlays.
-            </p>
+            <div class="sidebar-footer">
+                <p class="instructions">
+                    Use `Move` to drag image or inversion circle. Use `Line` or `Circle` to draw overlays.
+                </p>
+                <p class="attribution">
+                    By David Bachman, Stacy Brown, and GPT 5.3 codex
+                </p>
+            </div>
         </aside>
 
         <div class="canvas-area">
